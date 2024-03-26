@@ -1,0 +1,11 @@
+ESERCIZIO 26/03
+
+1.
+SELECT students.name, students.surname
+
+FROM `students`
+INNER JOIN degrees
+ON students.degree_id = degrees.id
+
+WHERE degrees.id = 53
+
