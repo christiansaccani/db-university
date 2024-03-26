@@ -31,7 +31,7 @@ ON course_teacher.teacher_id = teachers.id
 WHERE teachers.id = 44;
 
 4.
-SELECT students.name, students.surname, degrees.name, departments.name
+SELECT students.surname, students.name, degrees.name, departments.name
 FROM `students`
 
 INNER JOIN degrees
@@ -39,3 +39,5 @@ ON students.degree_id = degrees.id
 
 INNER JOIN departments
 ON degrees.department_id = departments.id
+
+ORDER BY students.surname, students.name;
