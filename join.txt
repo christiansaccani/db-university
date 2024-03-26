@@ -7,7 +7,7 @@ FROM `students`
 INNER JOIN degrees
 ON students.degree_id = degrees.id
 
-WHERE degrees.id = 53
+WHERE degrees.id = 53;
 
 2.
 SELECT courses.name, courses.description, degrees.name
@@ -16,7 +16,7 @@ FROM `courses`
 INNER JOIN degrees
 ON courses.degree_id = degrees.id
 
-WHERE degrees.id = 44
+WHERE degrees.id = 44;
 
 3.
 SELECT courses.name, courses.description, teachers.name
@@ -29,3 +29,13 @@ INNER JOIN teachers
 ON course_teacher.teacher_id = teachers.id
 
 WHERE teachers.id = 44;
+
+4.
+SELECT students.name, students.surname, degrees.name, departments.name
+FROM `students`
+
+INNER JOIN degrees
+ON students.degree_id = degrees.id
+
+INNER JOIN departments
+ON degrees.department_id = departments.id
