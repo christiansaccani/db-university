@@ -9,3 +9,11 @@ ON students.degree_id = degrees.id
 
 WHERE degrees.id = 53
 
+2.
+SELECT courses.name, courses.description, degrees.name
+
+FROM `courses`
+INNER JOIN degrees
+ON courses.degree_id = degrees.id
+
+WHERE degrees.id = 44
